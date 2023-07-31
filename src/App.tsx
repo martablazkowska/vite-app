@@ -1,11 +1,11 @@
 import "./App.css";
+import Layout from "./components/Layout/Layout";
 
 function App() {
   return (
-    <div>
+    <Layout>
       <div>My vite app</div>
-      <div>subtitile</div>
-    </div>
+    </Layout>
   );
 }
 
