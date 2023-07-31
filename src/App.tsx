@@ -1,7 +1,12 @@
 import "./App.css";
+import Layout from "./components/Layout/Layout";
 
 function App() {
-  return <>My vite app</>;
+  return (
+    <Layout>
+      <div>My vite app</div>
+    </Layout>
+  );
 }
 
 export default App;
