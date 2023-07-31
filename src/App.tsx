@@ -1,7 +1,12 @@
 import "./App.css";
 
 function App() {
-  return <>My vite app</>;
+  return (
+    <div>
+      <div>My vite app</div>
+      <div>subtitile</div>
+    </div>
+  );
 }
 
 export default App;
