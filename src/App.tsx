@@ -1,19 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
 import "./App.css";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./pages/Home/HomePage";
-import ListPage from "./pages/List/ListPage";
+import CatsPage from "./pages/Cats/CatsPage";
+import CatPage from "./pages/Cats/CatPage";
+import { store } from "./store/store";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/list" element={<ListPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="cats">
+              <Route index element={<CatsPage />}></Route>
+              <Route path=":name" element={<CatPage />} />
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

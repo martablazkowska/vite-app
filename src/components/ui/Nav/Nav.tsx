@@ -7,7 +7,7 @@ const Nav = () => {
         <Link to="/">Home</Link>
       </li>
       <li className="bg-stone-200 text-stone-700 px-2 py-1 rounded-sm hover:bg-stone-100">
-        <Link to="/list">List</Link>
+        <Link to="/cats">Cats</Link>
       </li>
     </ul>
   );
