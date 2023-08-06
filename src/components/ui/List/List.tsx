@@ -14,7 +14,8 @@ const List = ({ items }: IListProps) => {
     <ul>
       {items.map((item) => (
         <li className="p-1" key={`LIST_ITEM_${item.label}`}>
-          <Link to={item.link}>{item.label}</Link>
+          {/* <Link to={item.link}>{item.label}</Link> */}
+          {item.label}
         </li>
       ))}
     </ul>

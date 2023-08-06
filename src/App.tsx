@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import "./App.css";
 import Layout from "./components/Layout/Layout";
@@ -9,18 +9,21 @@ import { store } from "./store/store";
 
 function App() {
   return (
+    // <Provider store={store}>
+    //   <Routes>
+    //     <Route path="/" element={<Layout />}>
+    //       <Route index element={<HomePage />} />
+    //       <Route path="cats">
+    //         <Route index element={<CatsPage />}></Route>
+    //         <Route path=":name" element={<CatPage />} />
+    //       </Route>
+    //     </Route>
+    //   </Routes>
+    // </Provider>
     <Provider store={store}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<HomePage />} />
-            <Route path="cats">
-              <Route index element={<CatsPage />}></Route>
-              <Route path=":name" element={<CatPage />} />
-            </Route>
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <Layout>
+        <CatsPage />
+      </Layout>
     </Provider>
   );
 }
